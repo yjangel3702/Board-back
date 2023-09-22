@@ -4,8 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.apache.tomcat.jni.User;
-
 import com.yujung.boardback.dto.request.auth.SignUpRequestDto;
 
 import lombok.AllArgsConstructor;
