@@ -9,6 +9,8 @@ public interface ResponseCode {
   String DUPLICATED_NICKNAME = "DN";
   String DUPLICATED_TELL_NUMBER = "DT";
 
+  String SIGN_IN_FAILED = "SF";
+
   String DATABASE_ERROR = "DBE";
 
 }
