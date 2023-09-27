@@ -3,10 +3,10 @@ package com.yujung.boardback.dto.request.board;
 import java.util.List;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 import lombok.Setter;
 
 @Getter
@@ -20,7 +20,7 @@ public class PostBoardRequestDto {
   @NotBlank
   private String content;
 
-  @NonNull
+  @NotNull
   private List<String> boardImageList;
 
 }
