@@ -9,7 +9,6 @@ import com.yujung.boardback.common.object.BoardListItem;
 import com.yujung.boardback.dto.response.ResponseCode;
 import com.yujung.boardback.dto.response.ResponseDto;
 import com.yujung.boardback.dto.response.ResponseMessage;
-import com.yujung.boardback.entity.BoardEntity;
 import com.yujung.boardback.entity.BoardViewEntity;
 
 import lombok.Getter;
