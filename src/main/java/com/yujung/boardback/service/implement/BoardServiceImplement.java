@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.yujung.boardback.dto.request.board.PostBoardRequestDto;
 import com.yujung.boardback.dto.response.ResponseDto;
 import com.yujung.boardback.dto.response.board.GetBoardResponseDto;
+import com.yujung.boardback.dto.response.board.GetCommentListResponseDto;
 import com.yujung.boardback.dto.response.board.GetFavoriteListResponseDto;
 import com.yujung.boardback.dto.response.board.GetLatestBoardListResponseDto;
 import com.yujung.boardback.dto.response.board.PostBoardResponseDto;
@@ -112,6 +113,11 @@ public class BoardServiceImplement implements BoardService{
   }
 
   @Override
+  public ResponseEntity<? super GetCommentListResponseDto> getCommentList(Integer boardNumber) {
+    
+  }
+
+  @Override
   public ResponseEntity<? super GetLatestBoardListResponseDto> getLatestBoardList() {
 
     List<BoardViewEntity> boardViewEntities = new ArrayList<>();
@@ -153,6 +159,10 @@ public class BoardServiceImplement implements BoardService{
 
     return PutFavoriteResponseDto.success();
   }
+
+
+
+
 
 
 
