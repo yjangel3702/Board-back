@@ -13,6 +13,8 @@ public interface ResponseMessage {
 
   String SIGN_IN_FAILED = "Login information mismatch.";
 
+  String NO_PERMISSION = "Do not have permission.";
+
   String DATABASE_ERROR = "Database error.";
   
 }
