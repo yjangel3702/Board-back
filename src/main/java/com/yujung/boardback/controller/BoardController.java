@@ -22,6 +22,7 @@ import com.yujung.boardback.dto.response.board.GetBoardResponseDto;
 import com.yujung.boardback.dto.response.board.GetCommentListResponseDto;
 import com.yujung.boardback.dto.response.board.GetFavoriteListResponseDto;
 import com.yujung.boardback.dto.response.board.GetLatestBoardListResponseDto;
+import com.yujung.boardback.dto.response.board.GetUserBoardListResponseDto;
 import com.yujung.boardback.dto.response.board.PatchBoardResponseDto;
 import com.yujung.boardback.dto.response.board.PostBoardResponseDto;
 import com.yujung.boardback.dto.response.board.PostCommentResponseDto;
@@ -64,6 +65,14 @@ public class BoardController {
   @GetMapping("/latest-list")
   public ResponseEntity<? super GetLatestBoardListResponseDto> getLatestBoardList() {
     ResponseEntity<? super GetLatestBoardListResponseDto> response = boardService.getLatestBoardList();
+    return response;
+  }
+
+  @GetMapping("/user-board-list/{email}")
+  public ResponseEntity<? super GetUserBoardListResponseDto> getUserBoardList(
+    @PathVariable("email") String email
+  ) {
+    ResponseEntity<? super GetUserBoardListResponseDto> response = boardService.getUserBoardList(email);
     return response;
   }
 
