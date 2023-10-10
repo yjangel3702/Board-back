@@ -11,6 +11,7 @@ import com.yujung.boardback.dto.response.board.GetCommentListResponseDto;
 import com.yujung.boardback.dto.response.board.GetFavoriteListResponseDto;
 import com.yujung.boardback.dto.response.board.GetLatestBoardListResponseDto;
 import com.yujung.boardback.dto.response.board.GetUserBoardListResponseDto;
+import com.yujung.boardback.dto.response.board.IncreaseViewCountResponseDto;
 import com.yujung.boardback.dto.response.board.PatchBoardResponseDto;
 import com.yujung.boardback.dto.response.board.PostBoardResponseDto;
 import com.yujung.boardback.dto.response.board.PostCommentResponseDto;
@@ -30,6 +31,8 @@ public interface BoardService {
   ResponseEntity<? super PutFavoriteResponseDto> putFavorite(Integer boardNumber, String email);
 
   ResponseEntity<? super PatchBoardResponseDto> patchBoard(PatchBoardRequestDto dto, Integer boardNumber, String email);
+  ResponseEntity<? super IncreaseViewCountResponseDto> increaseViewCount(Integer boardNumber);
+
 
   ResponseEntity<? super DeleteBoardResponseDto> deleteBoard(Integer boardNumber, String email);
 }
