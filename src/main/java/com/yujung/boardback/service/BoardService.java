@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import com.yujung.boardback.dto.request.board.PatchBoardRequestDto;
 import com.yujung.boardback.dto.request.board.PostBoardRequestDto;
 import com.yujung.boardback.dto.request.board.PostCommentRequestDto;
+import com.yujung.boardback.dto.response.board.DeleteBoardResponseDto;
 import com.yujung.boardback.dto.response.board.GetBoardResponseDto;
 import com.yujung.boardback.dto.response.board.GetCommentListResponseDto;
 import com.yujung.boardback.dto.response.board.GetFavoriteListResponseDto;
@@ -21,13 +22,12 @@ public interface BoardService {
 
   ResponseEntity<? super GetBoardResponseDto> getBoard(Integer boardNumber);
   ResponseEntity<? super GetFavoriteListResponseDto> getFavoriteList(Integer boardNumber);
-
   ResponseEntity<? super GetCommentListResponseDto> getCommentList(Integer boardNumber);
-  
   ResponseEntity<? super GetLatestBoardListResponseDto> getLatestBoardList();
 
   ResponseEntity<? super PutFavoriteResponseDto> putFavorite(Integer boardNumber, String email);
 
   ResponseEntity<? super PatchBoardResponseDto> patchBoard(PatchBoardRequestDto dto, Integer boardNumber, String email);
 
+  ResponseEntity<? super DeleteBoardResponseDto> deleteBoard(Integer boardNumber, String email);
 }
